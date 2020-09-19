@@ -1,0 +1,14 @@
+type Cocktail @model {
+  id: ID!
+  name: String!
+  description: String
+  drinks: [Drink] 
+}
+
+type Drink @model {
+  id: ID!
+  name: String!
+  description: String
+  alcohol: Boolean!
+  cocktails: [Cocktail]
+}
