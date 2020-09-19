@@ -3,8 +3,11 @@
     "name": "BxProject",
     "slug": "BxProject",
     "privacy": "public",
-    "sdkVersion": "35.0.0",
-    "platforms": ["ios", "android", "web"],
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
     "version": "1.0.0",
     "orientation": "portrait",
     "updates": {
@@ -13,9 +16,8 @@
     "ios": {
       "supportsTablet": true
     },
-
     "androidNavigationBar": {
-      "visible": false
+      "visible": "sticky-immersive"
     }
   }
 }

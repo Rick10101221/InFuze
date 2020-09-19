@@ -10,6 +10,11 @@
       "StackName": "amplify-infuze-dev-111611",
       "StackId": "arn:aws:cloudformation:us-east-1:482593015494:stack/amplify-infuze-dev-111611/ae03d280-fa82-11ea-8728-0e69ad9c0ded",
       "AmplifyAppId": "d34m0fnab7t2pz"
+    },
+    "categories": {
+      "auth": {
+        "infuze2c5a1941": {}
+      }
     }
   }
 }

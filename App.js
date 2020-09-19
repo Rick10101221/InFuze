@@ -11,10 +11,13 @@ import Page1 from "./src/screens/Page1";
 import Page2 from "./src/screens/Page2";
 import Page3 from "./src/screens/Page3";
 import Page4 from "./src/screens/Page4";
+import Amplify from 'aws-amplify'
+import config from './aws-exports'
+Amplify.configure(config)
 
 const DrawerNavigation = createDrawerNavigator({
-  Login: Login,
   Welcome: Welcome,
+  Login: Login,
   Signup: Signup,
   Page1: Page1,
   Page2: Page2,
@@ -27,8 +30,8 @@ const StackNavigation = createStackNavigator(
     DrawerNavigation: {
       screen: DrawerNavigation
     },
-    Login: Login,
     Welcome: Welcome,
+    Login: Login,
     Signup: Signup,
     Page1: Page1,
     Page2: Page2,
