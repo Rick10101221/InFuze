@@ -1,16 +1,10 @@
-This project was created with [BuilderX](https://builderx.io/).
+This project was created for [Silly Hacks](https://sillyhacks.online/).
 
-## BuilderX uses third party libraries for some of the react-native components such as
-
-```
-@builderx/utils@0.1.6
-lodash
-react-navigation@4.0.10
-react-native-svg
-react-native-maps
-```
-
-These packages are included as dependencies in package.json file
+This app is created by
+[Onkar Setia](https://github.com/onkar2323)
+[Ananya Mishra](https://github.com/ananyamisra5)
+[Rickesh Khilnani](https://github.com/Rick10101221)
+[Rodrigo Gaona](https://github.com/Gaonuk) 
 
 ## Steps to run project
 
@@ -24,7 +18,7 @@ This will add the dependencies required to run the project.
 
 This will start the project.
 
-**Note: BuilderX generates Expo project at the moment, if you want to add custom fonts in your create-react-native-app project please refer these steps**
+## add custom fonts
 
 1. Add Fonts to an "assets/fonts" folder in the root of your project.
 2. Add rnpm to package.json providing the path to the font files:
