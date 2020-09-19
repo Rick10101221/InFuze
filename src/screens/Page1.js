@@ -9,13 +9,13 @@ import {
   Button,
 } from "react-native";
 import { Center } from "@builderx/utils";
-import { withAuthenticator, AmplifySignOut } from "aws-amplify-react-native";
+import { withAuthenticator } from "aws-amplify-react-native";
 import { API, graphqlOperation } from "aws-amplify";
 import { createDrink } from "../graphql/mutations";
 import RNPickerSelect from "react-native-picker-select";
 // import { listDrink } from '../graphql/queries'
 
-const initialState = { name: "", description: "", alcohol: null };
+const initialState = { name: "", description: "", alcohol: true };
 
 function Page1(props) {
   const [formState, setFormState] = useState(initialState);
@@ -26,7 +26,7 @@ function Page1(props) {
   // }, [])
 
   function setInput(key, value) {
-    setFormState({ ...formState, [key]: value })
+    setFormState({ ...formState, [key]: value });
   }
 
   async function addDrink() {
@@ -52,12 +52,12 @@ function Page1(props) {
         resizeMode="contain"
         style={styles.image2}
       ></Image>
-      {/* <Center horizontal>
+      <Center horizontal>
         <TouchableOpacity style={styles.button}></TouchableOpacity>
-      </Center> */}
-      {/* <Text style={styles.randomize}>Randomize</Text>
+      </Center>
+      <Text style={styles.randomize}>Randomize</Text>
       <Text style={styles.loremIpsum}>Lets choose some drinks for you</Text>
-      <Text style={styles.drinks}>Non-Alcoholic Drinks:</Text> */}
+      <Text style={styles.drinks}>Non-Alcoholic Drinks:</Text>
       <TextInput
         onChangeText={(val) => setInput("name", val)}
         style={styles.input}
@@ -70,13 +70,6 @@ function Page1(props) {
         value={formState.description}
         placeholder="Description"
       />
-      <RNPickerSelect
-        onValueChange={(value) => (formState.alcohol = value)}
-        items={[
-          { label: "Alcohol", value: true },
-          { label: "Non-Alcohol", value: false },
-        ]}
-      />
       <Button title="Create Drink" onPress={addDrink} />
       <TouchableOpacity
         onPress={() => props.navigation.navigate("Page2")}
@@ -88,7 +81,6 @@ function Page1(props) {
         resizeMode="contain"
         style={styles.image3}
       ></Image>
-      <AmplifySignOut />
     </View>
   );
 }

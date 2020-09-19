@@ -33,5 +33,10 @@
   "devDependencies": {
     "babel-plugin-module-resolver": "^4.0.0",
     "babel-preset-expo": "^8.2.3"
+  },
+  "rnpm": {
+    "assets": [
+      "./src/assets/fonts/"
+    ]
   }
 }
