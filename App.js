@@ -4,7 +4,7 @@ import { createStackNavigator } from "react-navigation-stack";
 import { createDrawerNavigator } from "react-navigation-drawer";
 import { AppLoading } from "expo";
 import Login from "./src/screens/Login";
-import Welcome from "./src/screens/Welcome";
+import Welcome1 from "./src/screens/Welcome1";
 import Signup from "./src/screens/Signup";
 import Page1 from "./src/screens/Page1";
 import Page2 from "./src/screens/Page2";
@@ -21,7 +21,7 @@ import config from './aws-exports'
 Amplify.configure(config)
 
 const DrawerNavigation = createDrawerNavigator({
-  Welcome: Welcome,
+  Welcome1: Welcome1,
   Page1: Page1,
   Page2: Page2,
   Page3: Page3,
@@ -39,7 +39,7 @@ const StackNavigation = createStackNavigator(
     DrawerNavigation: {
       screen: DrawerNavigation
     },
-    Welcome: Welcome,
+    Welcome1: Welcome1,
     Page1: Page1,
     Page2: Page2,
     Page3: Page3,

@@ -8,7 +8,7 @@ import {
   ImageBackground
 } from "react-native";
 
-const finaldrink = {name: "", description: ""}
+const finaldrink = {name: "", description: "", ingredients: []}
 
 function Page1(props) {
   return (
@@ -27,7 +27,8 @@ function Page1(props) {
       </View>
       <View style={styles.buttonStackStack}>
         <View style={styles.buttonStack}>
-          <TouchableOpacity style={styles.button}>
+          <TouchableOpacity style={styles.button}
+          onPress={() => props.navigation.navigate("Page2")}>
             <Text style={styles.randomize}>Randomize</Text>
           </TouchableOpacity>
           <ImageBackground
@@ -36,17 +37,21 @@ function Page1(props) {
             style={styles.image3}
             imageStyle={styles.image3_imageStyle}
           >
-            <TouchableOpacity style={styles.button6}>
+            <TouchableOpacity style={styles.button6}
+              onPress={() => props.navigation.navigate("Page2")}>
               <Text style={styles.soyMilk}>Soy Milk</Text>
             </TouchableOpacity>
           </ImageBackground>
-          <TouchableOpacity style={styles.button3}>
+          <TouchableOpacity style={styles.button3}
+          onPress={() => props.navigation.navigate("Page2")}>
             <Text style={styles.almondMilk}>Almond Milk</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.button4}>
+          <TouchableOpacity style={styles.button4}
+          onPress={() => props.navigation.navigate("Page2")}>
             <Text style={styles.coconutMilk}>Coconut Milk</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.button5}>
+          <TouchableOpacity style={styles.button5}
+          onPress={() => props.navigation.navigate("Page2")}>
             <Text style={styles.riceMilk}>Rice Milk</Text>
           </TouchableOpacity>
         </View>
