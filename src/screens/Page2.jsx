@@ -136,7 +136,7 @@ const styles = StyleSheet.create({
     width: 122,
     height: 56,
     position: "absolute",
-    backgroundColor: "rgba(249,179,179,1)"
+    //backgroundColor: "rgba(249,179,179,1)"
   },
   next1: {
     fontFamily: "comic-sans-ms-regular",
