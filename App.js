@@ -13,8 +13,6 @@ import Page3 from "./src/screens/Page3";
 import Page4 from "./src/screens/Page4";
 import Page5 from "./src/screens/Page5"
 import Page6 from "./src/screens/Page6"
-import Login from "./src/screens/Login"
-import Signup from "./src/screens/Signup"
 import FinalDrink from "./src/screens/FinalDrink.jsx"
 import ThanksyouScreen from "./src/screens/ThankyouScreen"
 import Gallery from "./src/screens/Gallery"
