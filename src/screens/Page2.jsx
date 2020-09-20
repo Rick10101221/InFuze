@@ -41,7 +41,8 @@ function Page2(props) {
             <Text style={styles.randomize1}>Randomize</Text>
           </TouchableOpacity>
         </View>
-        <TouchableOpacity style={styles.button2}>
+        <TouchableOpacity style={styles.button2}
+        onPress={() => props.navigation.navigate("Page3")}>
           <Text style={styles.coconutWater}>Coconut Water</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.button3}>

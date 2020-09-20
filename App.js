@@ -21,8 +21,8 @@ import config from './aws-exports'
 Amplify.configure(config)
 
 const DrawerNavigation = createDrawerNavigator({
-  Welcome1: Welcome1,
   Welcome: Welcome,
+  Welcome1: Welcome1,
   Page1: Page1,
   Page2: Page2,
   Page3: Page3,
@@ -39,8 +39,8 @@ const StackNavigation = createStackNavigator(
     DrawerNavigation: {
       screen: DrawerNavigation
     },
-    Welcome1: Welcome1,
     Welcome: Welcome,
+    Welcome1: Welcome1,
     Page1: Page1,
     Page2: Page2,
     Page3: Page3,

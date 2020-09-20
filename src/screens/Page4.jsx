@@ -27,7 +27,8 @@ function Page4(props) {
           <Text style={styles.daiquiri1}></Text>
           <Text style={styles.dragonFruit}>Dragon Fruit</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.button2}>
+        <TouchableOpacity style={styles.button2}
+        onPress={() => props.navigation.navigate("Page5")}>
           <Text style={styles.snakeSkinFruit}>SnakeSkin Fruit</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.button3}>

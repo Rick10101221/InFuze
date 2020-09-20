@@ -40,7 +40,8 @@ function Page6(props) {
               <Text style={styles.daiquiri}>Daiquiri</Text>
             </TouchableOpacity>
           </ImageBackground>
-          <TouchableOpacity style={styles.button2}>
+          <TouchableOpacity style={styles.button2}
+          onPress={() => props.navigation.navigate("FinalDrink")}>
             <Text style={styles.vodka}>Vodka</Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.button3}>

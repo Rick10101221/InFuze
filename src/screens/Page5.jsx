@@ -23,7 +23,8 @@ function Page5(props) {
             <Text style={styles.randomize1}>Randomize</Text>
           </TouchableOpacity>
         </ImageBackground>
-        <TouchableOpacity style={styles.button1}>
+        <TouchableOpacity style={styles.button1}
+        onPress={() => props.navigation.navigate("Page6")}>
           <Text style={styles.spicyNutellaYogurt}>Spicy Nutella Yogurt</Text>
           <Text style={styles.daiquiri1}></Text>
         </TouchableOpacity>

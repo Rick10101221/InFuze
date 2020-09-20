@@ -39,7 +39,8 @@ function Welcome1(props) {
         <Text style={styles.inFuze}>In-Fuze</Text>
         <Text style={styles.welcome3}>Welcome</Text>
         <Text style={styles.to2}>To</Text>
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity style={styles.button}
+        >
           <Text style={styles.letsBegin}>Lets Begin</Text>
         </TouchableOpacity>
       </View>

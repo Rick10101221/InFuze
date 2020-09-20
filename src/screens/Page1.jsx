@@ -35,7 +35,8 @@ function Page1(props) {
             style={styles.image3}
             imageStyle={styles.image3_imageStyle}
           >
-            <TouchableOpacity style={styles.button6}>
+            <TouchableOpacity style={styles.button6}
+            onPress={() => props.navigation.navigate("Page2")}>
               <Text style={styles.noMilk}>No Milk</Text>
             </TouchableOpacity>
           </ImageBackground>

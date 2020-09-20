@@ -26,12 +26,14 @@ function Page3(props) {
         <Text style={styles.daiquiri1}></Text>
         <Text style={styles.loremIpsum1}>Lets choose some drinks for you</Text>
         <TouchableOpacity
-          onPress={() => props.navigation.navigate("Page3")}
+          onPress={() => props.navigation.navigate("Page4")}
           style={styles.button1}
         >
           <Text style={styles.next1}>Next</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.button2}>
+        <TouchableOpacity style={styles.button2}
+        onPress={() => props.navigation.navigate("Page4")}
+        >
           <Text style={styles.icePlease}>Ice Please!</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.button3}>
