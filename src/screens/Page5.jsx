@@ -18,12 +18,14 @@ function Page5(props) {
           style={styles.image1}
           imageStyle={styles.image1_imageStyle}
         >
-          <TouchableOpacity style={styles.button6}>
+          <TouchableOpacity style={styles.button6}
+          onPress={() => props.navigation.navigate("Page6")}>
             <Text style={styles.randomize1}>Randomize</Text>
           </TouchableOpacity>
         </ImageBackground>
         <TouchableOpacity style={styles.button1}>
           <Text style={styles.spicyNutellaYogurt}>Spicy Nutella Yogurt</Text>
+          <Text style={styles.daiquiri1}></Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.button2}>
           <Text style={styles.blackSesameYogurt}>Black Sesame Yogurt</Text>
@@ -34,13 +36,14 @@ function Page5(props) {
         <TouchableOpacity style={styles.button4}>
           <Text style={styles.blueberryYogurt}>Blueberry Yogurt</Text>
         </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => props.navigation.navigate("Page3")}
+          style={styles.button5}
+        >
+          <Text style={styles.next1}>Next</Text>
+        </TouchableOpacity>
         <Text style={styles.loremIpsum1}>Lets choose some drinks for you</Text>
-        <Text style={styles.daiquiri1}></Text>
       </View>
-      <TouchableOpacity
-        onPress={() => props.navigation.navigate("Page3")}
-        style={styles.button5}
-      ></TouchableOpacity>
       <View style={styles.image2Row}>
         <Image
           source={require("../assets/images/logo.png")}
@@ -77,18 +80,19 @@ const styles = StyleSheet.create({
     width: 246,
     height: 67,
     backgroundColor: "rgba(255,182,182,1)",
-    marginTop: 94,
-    marginLeft: 224
+    marginTop: 87,
+    marginLeft: 212
   },
   randomize1: {
+    fontFamily: "comic-sans-ms-regular",
     color: "#121212",
     fontSize: 24,
     marginTop: 13,
-    marginLeft: 46
+    marginLeft: 66
   },
   button1: {
-    top: 537,
-    left: 225,
+    top: 468,
+    left: 205,
     width: 257,
     height: 56,
     position: "absolute",
@@ -108,14 +112,22 @@ const styles = StyleSheet.create({
     overflow: "visible"
   },
   spicyNutellaYogurt: {
+    fontFamily: "roboto-regular",
     color: "#121212",
     fontSize: 24,
     marginTop: 14,
     marginLeft: 21
   },
+  daiquiri1: {
+    fontFamily: "roboto-regular",
+    color: "#121212",
+    fontSize: 46,
+    marginTop: 2,
+    marginLeft: 27
+  },
   button2: {
-    top: 432,
-    left: 225,
+    top: 363,
+    left: 205,
     width: 257,
     height: 56,
     position: "absolute",
@@ -135,14 +147,15 @@ const styles = StyleSheet.create({
     overflow: "visible"
   },
   blackSesameYogurt: {
+    fontFamily: "roboto-regular",
     color: "#121212",
     fontSize: 24,
     marginTop: 14,
     marginLeft: 21
   },
   button3: {
-    top: 338,
-    left: 225,
+    top: 269,
+    left: 205,
     width: 257,
     height: 56,
     position: "absolute",
@@ -162,14 +175,15 @@ const styles = StyleSheet.create({
     overflow: "visible"
   },
   greekYogurt: {
+    fontFamily: "roboto-regular",
     color: "#121212",
     fontSize: 24,
     marginTop: 14,
-    marginLeft: 29
+    marginLeft: 30
   },
   button4: {
-    top: 252,
-    left: 225,
+    top: 183,
+    left: 205,
     width: 257,
     height: 56,
     position: "absolute",
@@ -189,43 +203,47 @@ const styles = StyleSheet.create({
     overflow: "visible"
   },
   blueberryYogurt: {
+    fontFamily: "roboto-regular",
     color: "#121212",
     fontSize: 24,
     marginTop: 14,
     marginLeft: 21
   },
-  loremIpsum1: {
-    top: 16,
-    left: 162,
+  button5: {
+    top: 548,
+    left: 383,
+    width: 122,
+    height: 56,
     position: "absolute",
+    backgroundColor: "rgba(249,179,179,1)"
+  },
+  next1: {
+    fontFamily: "comic-sans-ms-regular",
+    color: "#121212",
+    fontSize: 18,
+    marginTop: 15,
+    marginLeft: 36
+  },
+  loremIpsum1: {
+    top: 9,
+    left: 170,
+    position: "absolute",
+    fontFamily: "comic-sans-ms-regular",
     color: "#121212",
     fontSize: 16
   },
-  daiquiri1: {
-    top: 520,
-    left: 224,
-    position: "absolute",
-    color: "#121212",
-    fontSize: 46
-  },
   image1Stack: {
     width: 668,
-    height: 593,
-    marginTop: 168,
-    marginLeft: -140
-  },
-  button5: {
-    width: 122,
-    height: 56,
-    backgroundColor: "rgba(249,179,179,1)",
-    marginTop: 24,
-    marginLeft: 262
+    height: 604,
+    marginTop: 175,
+    marginLeft: -148
   },
   image2: {
     width: 80,
     height: 123
   },
   typeOfYogurt: {
+    fontFamily: "comic-sans-ms-regular",
     color: "#121212",
     fontSize: 24,
     marginLeft: 6,
@@ -240,8 +258,8 @@ const styles = StyleSheet.create({
   image2Row: {
     height: 144,
     flexDirection: "row",
-    marginTop: -828,
-    marginRight: 60
+    marginTop: -766,
+    marginRight: 21
   }
 });
 

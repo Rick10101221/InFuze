@@ -66,13 +66,14 @@ const styles = StyleSheet.create({
     opacity: 0.42
   },
   to3: {
+    fontFamily: "comic-sans-ms-regular",
     color: "#121212",
     fontSize: 57,
-    marginTop: 175,
+    marginTop: 252,
     marginLeft: 546
   },
   image2: {
-    top: 33,
+    top: 110,
     left: 399,
     width: 80,
     height: 123,
@@ -84,28 +85,31 @@ const styles = StyleSheet.create({
     height: 123
   },
   inFuze: {
-    top: 247,
+    top: 324,
     position: "absolute",
+    fontFamily: "comic-sans-ms-regular",
     color: "#121212",
     fontSize: 54,
-    left: 506
+    left: 487
   },
   welcome3: {
-    top: 110,
+    top: 187,
     left: 499,
     position: "absolute",
+    fontFamily: "comic-sans-ms-regular",
     color: "#121212",
     fontSize: 47
   },
   to2: {
-    top: 175,
+    top: 252,
     left: 546,
     position: "absolute",
+    fontFamily: "comic-sans-ms-regular",
     color: "#121212",
     fontSize: 57
   },
   button: {
-    top: 809,
+    top: 788,
     left: 477,
     width: 257,
     height: 56,
@@ -126,6 +130,7 @@ const styles = StyleSheet.create({
     overflow: "visible"
   },
   letsBegin: {
+    fontFamily: "roboto-regular",
     color: "#121212",
     fontSize: 24,
     marginTop: 14,
@@ -134,7 +139,7 @@ const styles = StyleSheet.create({
   imageStack: {
     width: 997,
     height: 1050,
-    marginTop: -20,
+    marginTop: -97,
     marginLeft: -399
   }
 });

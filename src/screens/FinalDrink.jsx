@@ -10,8 +10,6 @@ import {
 import { API, graphqlOperation, Auth } from "aws-amplify";
 import { createCocktail } from "../graphql/mutations";
 
-const initialState = { name: "", description: "", alcohol: true };
-
 function FinalDrink(props) {
   const [formState, setFormState] = useState(initialState);
   const [cocktails, setCocktails] = useState([]);
@@ -22,10 +20,13 @@ function FinalDrink(props) {
 
   async function addCocktail() {
     try {
-      const cocktail = { ...formState };
+      const cocktail = { 
+          name: "Silly Cocktail!",
+          description: "The silliest cocktail ever! Contains the most mysterious kinds of beverages"
+       };
       setCocktails([...cocktails, cocktail]);
       setFormState(initialState);
-      await API.graphql(graphqlOperation(createDrink, { input: drink }));
+      await API.graphql(graphqlOperation(createCocktail, { input: cocktail }));
     } catch (err) {
       console.log("error creating drink:", err);
     }
@@ -48,21 +49,34 @@ function FinalDrink(props) {
           style={styles.image1}
         ></Image>
       </View>
-      <View style={styles.button1Stack}>
+      <View style={styles.button2Row}>
         <TouchableOpacity
-          onPress={() => props.navigation.navigate("Page3")}
+          onPress={addCocktail}
+          style={styles.button2}
+        >
+          <Text style={styles.submit}>Submit</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => props.navigation.navigate("ThankyouScreen")}
           style={styles.button1}
         >
           <Text style={styles.finish}>Finish</Text>
         </TouchableOpacity>
+      </View>
+      <View style={styles.image3Stack}>
         <ImageBackground
           source={require("../assets/images/logo.png")}
           resizeMode="contain"
           style={styles.image3}
           imageStyle={styles.image3_imageStyle}
         >
-          <View style={styles.rect}></View>
+          <Image
+            source={require("../assets/images/drink.png")}
+            resizeMode="contain"
+            style={styles.image4}
+          ></Image>
         </ImageBackground>
+        <View style={styles.rect}></View>
       </View>
     </View>
   );
@@ -102,15 +116,25 @@ const styles = StyleSheet.create({
     height: 144,
     flexDirection: "row",
     marginTop: 13,
-    marginRight: 60
+    marginRight: 21
   },
-  button1: {
-    top: 525,
-    left: 334,
+  button2: {
     width: 122,
     height: 56,
-    position: "absolute",
     backgroundColor: "rgba(249,179,179,1)"
+  },
+  submit: {
+    fontFamily: "comic-sans-ms-regular",
+    color: "#121212",
+    fontSize: 18,
+    marginTop: 15,
+    marginLeft: 36
+  },
+  button1: {
+    width: 122,
+    height: 56,
+    backgroundColor: "rgba(249,179,179,1)",
+    marginLeft: 57
   },
   finish: {
     fontFamily: "comic-sans-ms-regular",
@@ -118,6 +142,13 @@ const styles = StyleSheet.create({
     fontSize: 18,
     marginTop: 15,
     marginLeft: 36
+  },
+  button2Row: {
+    height: 56,
+    flexDirection: "row",
+    marginTop: 566,
+    marginLeft: 40,
+    marginRight: 34
   },
   image3: {
     top: 0,
@@ -129,17 +160,25 @@ const styles = StyleSheet.create({
   image3_imageStyle: {
     opacity: 0.06
   },
+  image4: {
+    height: 386,
+    width: 410,
+    marginTop: 56,
+    marginLeft: 98
+  },
   rect: {
+    top: 41,
     width: 337,
     height: 471,
+    position: "absolute",
     backgroundColor: "rgba(255,255,255,1)",
-    marginLeft: 142
+    left: 134
   },
-  button1Stack: {
+  image3Stack: {
     width: 668,
-    height: 581,
-    marginTop: 81,
-    marginLeft: -103
+    height: 565,
+    marginTop: -622,
+    marginLeft: -115
   }
 });
 

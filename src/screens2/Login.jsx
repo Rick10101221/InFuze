@@ -8,12 +8,12 @@ import {
   TouchableOpacity
 } from "react-native";
 
-function Signup(props) {
+function Login(props) {
   return (
     <View style={styles.container}>
-      <View style={styles.rectStackStack}>
-        <View style={styles.rectStack}>
-          <View style={styles.rect}>
+      <View style={styles.rect2StackStack}>
+        <View style={styles.rect2Stack}>
+          <View style={styles.rect2}>
             <TextInput
               placeholder="Your Name"
               placeholderTextColor="rgba(230, 230, 230,1)"
@@ -28,30 +28,23 @@ function Signup(props) {
             style={styles.image2}
           ></Image>
         </View>
-        <View style={styles.rect2}>
+        <View style={styles.rect}>
           <TextInput
             placeholder="Password"
             placeholderTextColor="rgba(230, 230, 230,1)"
             style={styles.textInput2}
           ></TextInput>
         </View>
+        <Text style={styles.name}>Name:</Text>
         <Text style={styles.password}>Password:</Text>
         <TouchableOpacity
-          onPress={() => props.navigation.navigate("Login")}
+          onPress={() => props.navigation.navigate("Welcome")}
           style={styles.button2}
         >
-          <Text style={styles.text}>Signup</Text>
+          <Text style={styles.text}>Login</Text>
         </TouchableOpacity>
-        <View style={styles.rect3}>
-          <TextInput
-            placeholder="Email"
-            placeholderTextColor="rgba(230, 230, 230,1)"
-            style={styles.textInput3}
-          ></TextInput>
-        </View>
-        <Text style={styles.email}>Email:</Text>
+        <Text style={styles.text}>Or create a new account</Text>
       </View>
-      <Text style={styles.name}>Name:</Text>
       <View style={styles.image1Row}>
         <Image
           source={require("../assets/images/logo.png")}
@@ -64,7 +57,7 @@ function Signup(props) {
           style={styles.image}
         ></Image>
       </View>
-      <Text style={styles.text}>Already have an account?Login</Text>
+      <Text style={styles.loginSignUp}>Login/Sign up:</Text>
     </View>
   );
 }
@@ -74,13 +67,13 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "rgba(250,209,209,1)"
   },
-  rect: {
-    top: 0,
-    width: 226,
+  rect2: {
+    width: 215,
     height: 67,
     position: "absolute",
     backgroundColor: "rgba(248,176,176,1)",
-    left: 177
+    left: 231,
+    top: 70
   },
   textInput: {
     fontFamily: "comic-sans-ms-regular",
@@ -88,27 +81,27 @@ const styles = StyleSheet.create({
     fontSize: 16,
     width: 82,
     height: 22,
-    marginTop: 12,
+    marginTop: 22,
     marginLeft: 7
   },
   image2: {
-    top: 7,
-    width: 668,
-    height: 490,
-    position: "absolute",
-    opacity: 0.06,
-    left: 0
-  },
-  rectStack: {
     top: 0,
     left: 0,
     width: 668,
-    height: 497,
+    height: 565,
+    position: "absolute",
+    opacity: 0.06
+  },
+  rect2Stack: {
+    top: 0,
+    left: 0,
+    width: 668,
+    height: 565,
     position: "absolute"
   },
-  rect2: {
-    top: 181,
-    left: 177,
+  rect: {
+    top: 248,
+    left: 227,
     width: 213,
     height: 68,
     position: "absolute",
@@ -121,70 +114,47 @@ const styles = StyleSheet.create({
     height: 31,
     fontSize: 16,
     marginTop: 19,
-    marginLeft: 4
+    marginLeft: 24
+  },
+  name: {
+    top: 10,
+    left: 211,
+    position: "absolute",
+    fontFamily: "comic-sans-ms-regular",
+    color: "#121212",
+    fontSize: 24
   },
   password: {
-    top: 119,
-    left: 154,
+    top: 183,
+    left: 215,
     position: "absolute",
     fontFamily: "comic-sans-ms-regular",
     color: "#121212",
     fontSize: 24
   },
   button2: {
-    top: 474,
-    left: 220,
+    top: 426,
+    left: 246,
     width: 158,
     height: 45,
     position: "absolute",
     backgroundColor: "rgba(252,176,176,1)"
   },
   text: {
-    fontFamily: "comic-sans-ms-regular",
-    color: "#121212",
-    fontSize: 16,
-    width: 244,
-    height: 34,
-    marginTop: 579,
-    marginLeft: 60
-  },
-  rect3: {
-    top: 356,
-    left: 184,
-    width: 213,
-    height: 68,
-    position: "absolute",
-    backgroundColor: "rgba(253,181,181,1)"
-  },
-  textInput3: {
-    fontFamily: "comic-sans-ms-regular",
-    color: "#121212",
-    width: 87,
-    height: 31,
-    fontSize: 16,
-    marginTop: 3,
-    marginLeft: 5
-  },
-  email: {
-    top: 303,
-    left: 177,
+    top: 484,
+    left: 238,
     position: "absolute",
     fontFamily: "comic-sans-ms-regular",
     color: "#121212",
-    fontSize: 24
+    fontSize: 16,
+    width: 190,
+    height: 23
   },
-  rectStackStack: {
+  rect2StackStack: {
     width: 668,
-    height: 519,
-    marginTop: 198,
-    marginLeft: -129
-  },
-  name: {
-    fontFamily: "comic-sans-ms-regular",
-    color: "#121212",
-    fontSize: 24,
-    marginTop: -558,
-    marginLeft: 45
+    height: 565,
+    marginTop: 249,
+    marginLeft: -142
   },
   image1: {
     width: 80,
@@ -193,15 +163,22 @@ const styles = StyleSheet.create({
   image: {
     width: 108,
     height: 113,
-    marginLeft: 171,
-    marginTop: 33
+    marginLeft: 178,
+    marginTop: 34
   },
   image1Row: {
-    height: 146,
+    height: 147,
     flexDirection: "row",
-    marginTop: -180,
-    marginRight: 16
+    marginTop: -801,
+    marginRight: 48
+  },
+  loginSignUp: {
+    fontFamily: "comic-sans-ms-regular",
+    color: "#121212",
+    fontSize: 24,
+    marginTop: 26,
+    marginLeft: 44
   }
 });
 
-export default Signup;
+export default Login;

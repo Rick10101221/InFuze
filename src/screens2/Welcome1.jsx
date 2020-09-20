@@ -5,11 +5,11 @@ import {
   StatusBar,
   Image,
   ImageBackground,
-  Text,
-  TouchableOpacity
+  TouchableOpacity,
+  Text
 } from "react-native";
 
-function Welcome(props) {
+function Welcome1(props) {
   return (
     <View style={styles.container}>
       <StatusBar barStyle="dark-content" />
@@ -20,7 +20,9 @@ function Welcome(props) {
           style={styles.image}
           imageStyle={styles.image_imageStyle}
         >
-          <Text style={styles.to3}>To</Text>
+          <TouchableOpacity style={styles.button1}>
+            <Text style={styles.viewYourGallery}>View Your Gallery</Text>
+          </TouchableOpacity>
         </ImageBackground>
         <ImageBackground
           source={require("../assets/images/logo.png")}
@@ -37,10 +39,7 @@ function Welcome(props) {
         <Text style={styles.inFuze}>In-Fuze</Text>
         <Text style={styles.welcome3}>Welcome</Text>
         <Text style={styles.to2}>To</Text>
-        <TouchableOpacity
-          onPress={() => props.navigation.navigate("Page1")}
-          style={styles.button}
-        >
+        <TouchableOpacity style={styles.button}>
           <Text style={styles.letsBegin}>Lets Begin</Text>
         </TouchableOpacity>
       </View>
@@ -58,23 +57,42 @@ const styles = StyleSheet.create({
     top: 0,
     left: 0,
     width: 997,
-    height: 1050,
+    height: 966,
     position: "absolute",
     backgroundColor: "#fff"
   },
   image_imageStyle: {
     opacity: 0.42
   },
-  to3: {
-    fontFamily: "comic-sans-ms-regular",
+  button1: {
+    width: 257,
+    height: 56,
+    backgroundColor: "rgba(244,187,187,1)",
+    borderWidth: 7,
+    borderColor: "#000000",
+    borderStyle: "solid",
+    borderRadius: 15,
+    shadowColor: "rgba(0,0,0,1)",
+    shadowOffset: {
+      width: 3,
+      height: 3
+    },
+    elevation: 5,
+    shadowOpacity: 0.37,
+    shadowRadius: 0,
+    overflow: "visible",
+    marginTop: 807,
+    marginLeft: 469
+  },
+  viewYourGallery: {
     color: "#121212",
-    fontSize: 57,
-    marginTop: 252,
-    marginLeft: 546
+    fontSize: 24,
+    marginTop: 14,
+    marginLeft: 36
   },
   image2: {
-    top: 110,
-    left: 399,
+    top: 13,
+    left: 405,
     width: 80,
     height: 123,
     position: "absolute"
@@ -85,32 +103,29 @@ const styles = StyleSheet.create({
     height: 123
   },
   inFuze: {
-    top: 324,
+    top: 227,
     position: "absolute",
-    fontFamily: "comic-sans-ms-regular",
     color: "#121212",
     fontSize: 54,
-    left: 487
+    left: 512
   },
   welcome3: {
-    top: 187,
+    top: 90,
     left: 499,
     position: "absolute",
-    fontFamily: "comic-sans-ms-regular",
     color: "#121212",
     fontSize: 47
   },
   to2: {
-    top: 252,
-    left: 546,
+    top: 155,
+    left: 552,
     position: "absolute",
-    fontFamily: "comic-sans-ms-regular",
     color: "#121212",
     fontSize: 57
   },
   button: {
-    top: 788,
-    left: 477,
+    top: 726,
+    left: 469,
     width: 257,
     height: 56,
     position: "absolute",
@@ -130,18 +145,16 @@ const styles = StyleSheet.create({
     overflow: "visible"
   },
   letsBegin: {
-    fontFamily: "roboto-regular",
     color: "#121212",
     fontSize: 24,
     marginTop: 14,
-    marginLeft: 52
+    marginLeft: 73
   },
   imageStack: {
     width: 997,
-    height: 1050,
-    marginTop: -97,
-    marginLeft: -399
+    height: 966,
+    marginLeft: -405
   }
 });
 
-export default Welcome;
+export default Welcome1;

@@ -18,15 +18,19 @@ function Page3(props) {
           style={styles.image1}
           imageStyle={styles.image1_imageStyle}
         >
-          <TouchableOpacity style={styles.button4}>
+          <TouchableOpacity style={styles.button4}
+          onPress={() => props.navigation.navigate("Page4")}>
             <Text style={styles.randomize1}>Randomize</Text>
           </TouchableOpacity>
         </ImageBackground>
         <Text style={styles.daiquiri1}></Text>
+        <Text style={styles.loremIpsum1}>Lets choose some drinks for you</Text>
         <TouchableOpacity
           onPress={() => props.navigation.navigate("Page3")}
           style={styles.button1}
-        ></TouchableOpacity>
+        >
+          <Text style={styles.next1}>Next</Text>
+        </TouchableOpacity>
         <TouchableOpacity style={styles.button2}>
           <Text style={styles.icePlease}>Ice Please!</Text>
         </TouchableOpacity>
@@ -47,7 +51,6 @@ function Page3(props) {
           style={styles.image2}
         ></Image>
       </View>
-      <Text style={styles.loremIpsum1}>Lets choose some drinks for you</Text>
     </View>
   );
 }
@@ -62,7 +65,7 @@ const styles = StyleSheet.create({
     height: 565,
     position: "absolute",
     left: 0,
-    top: 0
+    top: 11
   },
   image1_imageStyle: {
     opacity: 0.06
@@ -71,33 +74,50 @@ const styles = StyleSheet.create({
     width: 246,
     height: 67,
     backgroundColor: "rgba(255,182,182,1)",
-    marginTop: 10,
-    marginLeft: 190
+    marginTop: 68,
+    marginLeft: 179
   },
   randomize1: {
+    fontFamily: "comic-sans-ms-regular",
     color: "#121212",
     fontSize: 24,
-    marginTop: 22,
+    marginTop: 23,
     marginLeft: 28
   },
   daiquiri1: {
-    top: 441,
-    left: 190,
+    top: 504,
+    left: 206,
     position: "absolute",
+    fontFamily: "roboto-regular",
     color: "#121212",
     fontSize: 46
   },
+  loremIpsum1: {
+    top: 0,
+    left: 144,
+    position: "absolute",
+    fontFamily: "comic-sans-ms-regular",
+    color: "#121212",
+    fontSize: 16
+  },
   button1: {
-    top: 538,
-    left: 368,
+    top: 526,
+    left: 334,
     width: 122,
     height: 56,
     position: "absolute",
     backgroundColor: "rgba(249,179,179,1)"
   },
+  next1: {
+    fontFamily: "comic-sans-ms-regular",
+    color: "#121212",
+    fontSize: 18,
+    marginTop: 15,
+    marginLeft: 26
+  },
   button2: {
-    top: 201,
-    left: 191,
+    top: 198,
+    left: 181,
     width: 257,
     height: 56,
     position: "absolute",
@@ -117,14 +137,15 @@ const styles = StyleSheet.create({
     overflow: "visible"
   },
   icePlease: {
+    fontFamily: "roboto-regular",
     color: "#121212",
     fontSize: 24,
     marginTop: 14,
-    marginLeft: 27
+    marginLeft: 28
   },
   button3: {
-    top: 344,
-    left: 191,
+    top: 341,
+    left: 181,
     width: 257,
     height: 56,
     position: "absolute",
@@ -144,22 +165,24 @@ const styles = StyleSheet.create({
     overflow: "visible"
   },
   absolutelyNoIce: {
+    fontFamily: "roboto-regular",
     color: "#121212",
     fontSize: 24,
-    marginTop: 14,
+    marginTop: 15,
     marginLeft: 23
   },
   image1Stack: {
     width: 668,
-    height: 594,
-    marginTop: 247,
-    marginLeft: -106
+    height: 582,
+    marginTop: 184,
+    marginLeft: -122
   },
   image3: {
     width: 80,
     height: 123
   },
   iceAnyone: {
+    fontFamily: "comic-sans-ms-regular",
     color: "#121212",
     fontSize: 24,
     marginLeft: 5,
@@ -174,14 +197,8 @@ const styles = StyleSheet.create({
   image3Row: {
     height: 140,
     flexDirection: "row",
-    marginTop: -828,
-    marginRight: 60
-  },
-  loremIpsum1: {
-    color: "#121212",
-    fontSize: 16,
-    marginTop: 31,
-    marginLeft: 22
+    marginTop: -753,
+    marginRight: 21
   }
 });
 

@@ -8,8 +8,6 @@ import {
   ImageBackground
 } from "react-native";
 
-const finaldrink = {name: "", description: "", ingredients: []}
-
 function Page1(props) {
   return (
     <View style={styles.container}>
@@ -37,21 +35,17 @@ function Page1(props) {
             style={styles.image3}
             imageStyle={styles.image3_imageStyle}
           >
-            <TouchableOpacity style={styles.button6}
-              onPress={() => props.navigation.navigate("Page2")}>
-              <Text style={styles.soyMilk}>Soy Milk</Text>
+            <TouchableOpacity style={styles.button6}>
+              <Text style={styles.noMilk}>No Milk</Text>
             </TouchableOpacity>
           </ImageBackground>
-          <TouchableOpacity style={styles.button3}
-          onPress={() => props.navigation.navigate("Page2")}>
+          <TouchableOpacity style={styles.button3}>
             <Text style={styles.almondMilk}>Almond Milk</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.button4}
-          onPress={() => props.navigation.navigate("Page2")}>
+          <TouchableOpacity style={styles.button4}>
             <Text style={styles.coconutMilk}>Coconut Milk</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.button5}
-          onPress={() => props.navigation.navigate("Page2")}>
+          <TouchableOpacity style={styles.button5}>
             <Text style={styles.riceMilk}>Rice Milk</Text>
           </TouchableOpacity>
         </View>
@@ -87,28 +81,29 @@ const styles = StyleSheet.create({
     height: 123,
     flexDirection: "row",
     marginTop: 13,
-    marginRight: 60
+    marginRight: 21
   },
   button: {
-    top: 59,
+    top: 69,
     width: 246,
     height: 67,
     position: "absolute",
     backgroundColor: "rgba(255,182,182,1)",
-    left: 209
+    left: 193
   },
   randomize: {
+    fontFamily: "comic-sans-ms-regular",
     color: "#121212",
     fontSize: 24,
     marginTop: 12,
-    marginLeft: 28
+    marginLeft: 27
   },
   image3: {
     top: 0,
-    left: 0,
     width: 668,
     height: 565,
-    position: "absolute"
+    position: "absolute",
+    left: 0
   },
   image3_imageStyle: {
     opacity: 0.06
@@ -130,18 +125,19 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.37,
     shadowRadius: 0,
     overflow: "visible",
-    marginTop: 483,
-    marginLeft: 205
+    marginTop: 493,
+    marginLeft: 189
   },
-  soyMilk: {
+  noMilk: {
+    fontFamily: "roboto-regular",
     color: "#121212",
     fontSize: 24,
     marginTop: 13,
     marginLeft: 42
   },
   button3: {
-    top: 282,
-    left: 205,
+    top: 292,
+    left: 189,
     width: 257,
     height: 56,
     position: "absolute",
@@ -161,14 +157,15 @@ const styles = StyleSheet.create({
     overflow: "visible"
   },
   almondMilk: {
+    fontFamily: "roboto-regular",
     color: "#121212",
     fontSize: 24,
     marginTop: 14,
-    marginLeft: 50
+    marginLeft: 49
   },
   button4: {
-    top: 196,
-    left: 205,
+    top: 206,
+    left: 189,
     width: 257,
     height: 56,
     position: "absolute",
@@ -188,14 +185,15 @@ const styles = StyleSheet.create({
     overflow: "visible"
   },
   coconutMilk: {
+    fontFamily: "roboto-regular",
     color: "#121212",
     fontSize: 24,
     marginTop: 14,
     marginLeft: 42
   },
   button5: {
-    top: 377,
-    left: 203,
+    top: 387,
+    left: 187,
     width: 257,
     height: 56,
     position: "absolute",
@@ -215,6 +213,7 @@ const styles = StyleSheet.create({
     overflow: "visible"
   },
   riceMilk: {
+    fontFamily: "roboto-regular",
     color: "#121212",
     fontSize: 24,
     marginTop: 14,
@@ -228,32 +227,35 @@ const styles = StyleSheet.create({
     position: "absolute"
   },
   loremIpsum: {
-    top: 6,
-    left: 147,
+    top: 32,
+    left: 169,
     position: "absolute",
+    fontFamily: "comic-sans-ms-regular",
     color: "#121212",
     fontSize: 16
   },
   buttonStackStack: {
     width: 668,
     height: 565,
-    marginTop: 60,
-    marginLeft: -125
+    marginTop: 34,
+    marginLeft: -147
   },
   drinks: {
+    fontFamily: "comic-sans-ms-regular",
     color: "#121212",
     fontSize: 24,
-    marginTop: -625,
-    marginLeft: 49
+    marginTop: -599,
+    marginLeft: 25
   },
   button2: {
     width: 122,
     height: 56,
     backgroundColor: "rgba(249,179,179,1)",
-    marginTop: 604,
-    marginLeft: 201
+    marginTop: 574,
+    marginLeft: 231
   },
   next: {
+    fontFamily: "comic-sans-ms-regular",
     color: "#121212",
     fontSize: 18,
     marginTop: 15,

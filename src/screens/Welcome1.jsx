@@ -81,8 +81,8 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.37,
     shadowRadius: 0,
     overflow: "visible",
-    marginTop: 807,
-    marginLeft: 469
+    marginTop: 769,
+    marginLeft: 470
   },
   viewYourGallery: {
     fontFamily: "roboto-regular",
@@ -92,8 +92,8 @@ const styles = StyleSheet.create({
     marginLeft: 36
   },
   image2: {
-    top: 13,
-    left: 405,
+    top: 59,
+    left: 418,
     width: 80,
     height: 123,
     position: "absolute"
@@ -104,32 +104,32 @@ const styles = StyleSheet.create({
     height: 123
   },
   inFuze: {
-    top: 227,
+    top: 273,
     position: "absolute",
     fontFamily: "comic-sans-ms-regular",
     color: "#121212",
     fontSize: 54,
-    left: 512
+    left: 506
   },
   welcome3: {
-    top: 90,
-    left: 499,
+    top: 136,
+    left: 512,
     position: "absolute",
     fontFamily: "comic-sans-ms-regular",
     color: "#121212",
     fontSize: 47
   },
   to2: {
-    top: 155,
-    left: 552,
+    top: 201,
+    left: 565,
     position: "absolute",
     fontFamily: "comic-sans-ms-regular",
     color: "#121212",
     fontSize: 57
   },
   button: {
-    top: 726,
-    left: 469,
+    top: 688,
+    left: 470,
     width: 257,
     height: 56,
     position: "absolute",
@@ -158,7 +158,8 @@ const styles = StyleSheet.create({
   imageStack: {
     width: 997,
     height: 966,
-    marginLeft: -405
+    marginTop: -46,
+    marginLeft: -418
   }
 });
 

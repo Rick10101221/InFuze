@@ -35,6 +35,7 @@ function Signup(props) {
             style={styles.textInput2}
           ></TextInput>
         </View>
+        <Text style={styles.name}>Name:</Text>
         <Text style={styles.password}>Password:</Text>
         <TouchableOpacity
           onPress={() => props.navigation.navigate("Login")}
@@ -51,7 +52,6 @@ function Signup(props) {
         </View>
         <Text style={styles.email}>Email:</Text>
       </View>
-      <Text style={styles.name}>Name:</Text>
       <View style={styles.image1Row}>
         <Image
           source={require("../assets/images/logo.png")}
@@ -75,12 +75,12 @@ const styles = StyleSheet.create({
     backgroundColor: "rgba(250,209,209,1)"
   },
   rect: {
-    top: 0,
+    top: 25,
     width: 226,
     height: 67,
     position: "absolute",
     backgroundColor: "rgba(248,176,176,1)",
-    left: 177
+    left: 188
   },
   textInput: {
     fontFamily: "comic-sans-ms-regular",
@@ -92,23 +92,23 @@ const styles = StyleSheet.create({
     marginLeft: 7
   },
   image2: {
-    top: 7,
+    top: 0,
     width: 668,
-    height: 490,
+    height: 565,
     position: "absolute",
     opacity: 0.06,
     left: 0
   },
   rectStack: {
-    top: 0,
+    top: 30,
     left: 0,
     width: 668,
-    height: 497,
+    height: 565,
     position: "absolute"
   },
   rect2: {
-    top: 181,
-    left: 177,
+    top: 236,
+    left: 188,
     width: 213,
     height: 68,
     position: "absolute",
@@ -123,17 +123,25 @@ const styles = StyleSheet.create({
     marginTop: 19,
     marginLeft: 4
   },
+  name: {
+    top: 0,
+    left: 172,
+    position: "absolute",
+    fontFamily: "comic-sans-ms-regular",
+    color: "#121212",
+    fontSize: 24
+  },
   password: {
-    top: 119,
-    left: 154,
+    top: 174,
+    left: 165,
     position: "absolute",
     fontFamily: "comic-sans-ms-regular",
     color: "#121212",
     fontSize: 24
   },
   button2: {
-    top: 474,
-    left: 220,
+    top: 529,
+    left: 231,
     width: 158,
     height: 45,
     position: "absolute",
@@ -145,12 +153,12 @@ const styles = StyleSheet.create({
     fontSize: 16,
     width: 244,
     height: 34,
-    marginTop: 579,
-    marginLeft: 60
+    marginTop: 651,
+    marginLeft: 73
   },
   rect3: {
-    top: 356,
-    left: 184,
+    top: 411,
+    left: 194,
     width: 213,
     height: 68,
     position: "absolute",
@@ -163,11 +171,11 @@ const styles = StyleSheet.create({
     height: 31,
     fontSize: 16,
     marginTop: 3,
-    marginLeft: 5
+    marginLeft: 6
   },
   email: {
-    top: 303,
-    left: 177,
+    top: 358,
+    left: 188,
     position: "absolute",
     fontFamily: "comic-sans-ms-regular",
     color: "#121212",
@@ -175,16 +183,9 @@ const styles = StyleSheet.create({
   },
   rectStackStack: {
     width: 668,
-    height: 519,
-    marginTop: 198,
-    marginLeft: -129
-  },
-  name: {
-    fontFamily: "comic-sans-ms-regular",
-    color: "#121212",
-    fontSize: 24,
-    marginTop: -558,
-    marginLeft: 45
+    height: 595,
+    marginTop: 215,
+    marginLeft: -127
   },
   image1: {
     width: 80,
@@ -199,8 +200,8 @@ const styles = StyleSheet.create({
   image1Row: {
     height: 146,
     flexDirection: "row",
-    marginTop: -180,
-    marginRight: 16
+    marginTop: -797,
+    marginRight: 55
   }
 });
 

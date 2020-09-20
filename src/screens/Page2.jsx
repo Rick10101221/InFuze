@@ -27,7 +27,17 @@ function Page2(props) {
           >
             <Text style={styles.appleCiderVinegar}>Apple Cider Vinegar</Text>
           </ImageBackground>
-          <TouchableOpacity style={styles.button6}>
+          <TouchableOpacity
+            onPress={() => props.navigation.navigate("Page3")}
+            style={styles.button5}
+          >
+            <Text style={styles.next1}>Next</Text>
+          </TouchableOpacity>
+          <Text style={styles.loremIpsum1}>
+            Lets choose some drinks for you
+          </Text>
+          <TouchableOpacity style={styles.button6}
+          onPress={() => props.navigation.navigate("Page3")}>
             <Text style={styles.randomize1}>Randomize</Text>
           </TouchableOpacity>
         </View>
@@ -39,12 +49,6 @@ function Page2(props) {
         </TouchableOpacity>
         <TouchableOpacity style={styles.button4}></TouchableOpacity>
       </View>
-      <TouchableOpacity
-        onPress={() => props.navigation.navigate("Page3")}
-        style={styles.button5}
-      >
-        <Text style={styles.next1}>Next</Text>
-      </TouchableOpacity>
       <View style={styles.image2Row}>
         <Image
           source={require("../assets/images/logo.png")}
@@ -58,7 +62,6 @@ function Page2(props) {
           style={styles.image3}
         ></Image>
       </View>
-      <Text style={styles.loremIpsum1}>Lets choose some drinks for you</Text>
     </View>
   );
 }
@@ -69,8 +72,8 @@ const styles = StyleSheet.create({
     backgroundColor: "rgba(252,213,213,1)"
   },
   button1: {
-    top: 469,
-    left: 200,
+    top: 459,
+    left: 189,
     width: 257,
     height: 56,
     position: "absolute",
@@ -91,11 +94,12 @@ const styles = StyleSheet.create({
     flexDirection: "row"
   },
   daiquiri1: {
+    fontFamily: "roboto-regular",
     color: "#121212",
-    fontSize: 46,
-    marginLeft: -1
+    fontSize: 46
   },
   orangeJuice: {
+    fontFamily: "roboto-regular",
     color: "#121212",
     fontSize: 24,
     marginLeft: 38
@@ -104,50 +108,75 @@ const styles = StyleSheet.create({
     height: 29,
     flexDirection: "row",
     flex: 1,
-    marginRight: 74,
-    marginLeft: 5,
+    marginRight: 75,
+    marginLeft: 4,
     marginTop: 13
   },
   image1: {
     top: 0,
-    left: 0,
     width: 668,
     height: 565,
-    position: "absolute"
+    position: "absolute",
+    left: 0
   },
   image1_imageStyle: {
     opacity: 0.06
   },
   appleCiderVinegar: {
+    fontFamily: "roboto-regular",
     color: "#121212",
     fontSize: 24,
-    marginTop: 199,
-    marginLeft: 229
+    marginTop: 189,
+    marginLeft: 217
+  },
+  button5: {
+    top: 560,
+    left: 371,
+    width: 122,
+    height: 56,
+    position: "absolute",
+    backgroundColor: "rgba(249,179,179,1)"
+  },
+  next1: {
+    fontFamily: "comic-sans-ms-regular",
+    color: "#121212",
+    fontSize: 18,
+    marginTop: 16,
+    marginLeft: 45
+  },
+  loremIpsum1: {
+    top: 0,
+    left: 169,
+    position: "absolute",
+    fontFamily: "comic-sans-ms-regular",
+    color: "#121212",
+    fontSize: 16
   },
   button6: {
-    top: 46,
+    top: 36,
     width: 246,
     height: 67,
     position: "absolute",
     backgroundColor: "rgba(255,182,182,1)",
-    left: 204
+    left: 193
   },
   randomize1: {
+    fontFamily: "comic-sans-ms-regular",
     color: "#121212",
     fontSize: 24,
     marginTop: 15,
-    marginLeft: 45
+    marginLeft: 44
   },
   button1Stack: {
     top: 0,
     left: 0,
     width: 668,
-    height: 565,
+    height: 616,
     position: "absolute"
   },
   button2: {
-    top: 368,
-    left: 198,
+    top: 358,
+    left: 187,
     width: 257,
     height: 56,
     position: "absolute",
@@ -167,14 +196,15 @@ const styles = StyleSheet.create({
     overflow: "visible"
   },
   coconutWater: {
+    fontFamily: "roboto-regular",
     color: "#121212",
     fontSize: 24,
     marginTop: 14,
     marginLeft: 42
   },
   button3: {
-    top: 274,
-    left: 200,
+    top: 264,
+    left: 189,
     width: 257,
     height: 56,
     position: "absolute",
@@ -194,14 +224,15 @@ const styles = StyleSheet.create({
     overflow: "visible"
   },
   kvas: {
+    fontFamily: "roboto-regular",
     color: "#121212",
     fontSize: 24,
     marginTop: 14,
     marginLeft: 34
   },
   button4: {
-    top: 186,
-    left: 200,
+    top: 176,
+    left: 189,
     width: 257,
     height: 56,
     position: "absolute",
@@ -222,28 +253,16 @@ const styles = StyleSheet.create({
   },
   button1StackStack: {
     width: 668,
-    height: 565,
-    marginTop: 206,
-    marginLeft: -120
-  },
-  button5: {
-    width: 122,
-    height: 56,
-    backgroundColor: "rgba(249,179,179,1)",
-    marginTop: 21,
-    marginLeft: 247
-  },
-  next1: {
-    color: "#121212",
-    fontSize: 18,
-    marginTop: 16,
-    marginLeft: 45
+    height: 616,
+    marginTop: 184,
+    marginLeft: -147
   },
   image2: {
     width: 80,
     height: 123
   },
   additionalLiquids: {
+    fontFamily: "comic-sans-ms-regular",
     color: "#121212",
     fontSize: 24,
     marginLeft: 5,
@@ -257,14 +276,8 @@ const styles = StyleSheet.create({
   image2Row: {
     height: 144,
     flexDirection: "row",
-    marginTop: -835,
-    marginRight: 60
-  },
-  loremIpsum1: {
-    color: "#121212",
-    fontSize: 16,
-    marginTop: 27,
-    marginLeft: 22
+    marginTop: -787,
+    marginRight: 21
   }
 });
 
