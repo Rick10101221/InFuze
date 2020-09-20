@@ -46,10 +46,7 @@ function App() {
   const [isLoadingComplete, setLoadingComplete] = useState(false);
   if (!isLoadingComplete) {
     return (
-      <AppLoading
-        onError={handleLoadingError}
-        onFinish={() => handleFinishLoading(setLoadingComplete)}
-      />
+      <AppContainer />
     );
   } else {
     return isLoadingComplete ? <AppContainer /> : <AppLoading />;
