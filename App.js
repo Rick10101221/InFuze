@@ -3,7 +3,6 @@ import { createAppContainer } from "react-navigation";
 import { createStackNavigator } from "react-navigation-stack";
 import { createDrawerNavigator } from "react-navigation-drawer";
 import { AppLoading } from "expo";
-import * as Font from "expo-font";
 import Login from "./src/screens/Login";
 import Welcome from "./src/screens/Welcome";
 import Signup from "./src/screens/Signup";
@@ -11,18 +10,18 @@ import Page1 from "./src/screens/Page1";
 import Page2 from "./src/screens/Page2";
 import Page3 from "./src/screens/Page3";
 import Page4 from "./src/screens/Page4";
+import Infuzer from "./src/screens/Infuzer"
 import Amplify from 'aws-amplify'
 import config from './aws-exports'
 Amplify.configure(config)
 
 const DrawerNavigation = createDrawerNavigator({
   Welcome: Welcome,
-  Login: Login,
-  Signup: Signup,
   Page1: Page1,
   Page2: Page2,
   Page3: Page3,
-  Page4: Page4
+  Page4: Page4,
+  Infuzer: Infuzer
 });
 
 const StackNavigation = createStackNavigator(
@@ -31,8 +30,6 @@ const StackNavigation = createStackNavigator(
       screen: DrawerNavigation
     },
     Welcome: Welcome,
-    Login: Login,
-    Signup: Signup,
     Page1: Page1,
     Page2: Page2,
     Page3: Page3,
@@ -50,7 +47,6 @@ function App() {
   if (!isLoadingComplete) {
     return (
       <AppLoading
-        startAsync={loadResourcesAsync}
         onError={handleLoadingError}
         onFinish={() => handleFinishLoading(setLoadingComplete)}
       />
@@ -58,14 +54,6 @@ function App() {
   } else {
     return isLoadingComplete ? <AppContainer /> : <AppLoading />;
   }
-}
-async function loadResourcesAsync() {
-  await Promise.all([
-    Font.loadAsync({
-      "roboto-regular": require("./src/assets/fonts/roboto-regular.ttf"),
-      "comic-sans-ms-regular": require("./src/assets/fonts/comic-sans-ms-regular.ttf")
-    })
-  ]);
 }
 function handleLoadingError(error) {
   console.warn(error);

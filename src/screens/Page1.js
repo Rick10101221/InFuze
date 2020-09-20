@@ -16,11 +16,63 @@ import RNPickerSelect from "react-native-picker-select";
 // import { listDrink } from '../graphql/queries'
 
 const initialState = { name: "", description: "", alcohol: true };
+const randomIngredient = { name: "", description: "", alcohol: "" };
+const ingredients = { ing1: "", ing2: "", ing3: "", ing4: "", ing5: "" };
+
+let cocktail = {};
 
 function Page1(props) {
   const [formState, setFormState] = useState(initialState);
   const [drinks, setDrinks] = useState([]);
+  const [cocktails, setCocktails] = useState([]);
 
+  async function getCocktailFromApi() {
+    try {
+      let response = await fetch(
+        "https://www.thecocktaildb.com/api/json/v1/1/random.php"
+      );
+      let responseJson = await response.json();
+      console.log(responseJson);
+      cocktail = responseJson;
+      getRandomIngredient(cocktail);
+      return responseJson;
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
+  async function getIngredientData(ingredientName) {
+    try {
+      let response = await fetch(
+        `https://www.thecocktaildb.com/api/json/v1/1/search.php?i=${ingredientName}`
+      );
+      let ingredientJson = await response.json();
+      console.log(ingredientJson);
+      randomIngredient["description"] = ingredientJson["ingredients"][0]["strDescription"]
+      if (ingredientJson["ingredients"][0]["strAlcohol"] === "Yes") {
+        randomIngredient["alcohol"] = true
+      } else {
+        randomIngredient["alcohol"] = false
+      }
+      console.log(randomIngredient)
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
+  function getRandomIngredient(responseJson) {
+    let response = responseJson;
+    let number = Math.floor(Math.random() * 15) + 1;
+    let ingredientName = response["drinks"][0][`strIngredient${number}`];
+    if (ingredientName !== null) {
+      getIngredientData(ingredientName);
+      randomIngredient["name"] = ingredientName;
+      console.log(number);
+    } else {
+      getRandomIngredient(response);
+    }
+    return number;
+  }
   // useEffect(() => {
   //   fetchTodos()
   // }, [])
@@ -75,6 +127,8 @@ function Page1(props) {
         onPress={() => props.navigation.navigate("Page2")}
         style={styles.button2}
       ></TouchableOpacity>
+      <Button title="Get Cocktail" onPress={getCocktailFromApi} />
+      <Button title="See name of cocktail" onPress={getRandomIngredient} />
       <Text style={styles.next}>Next</Text>
       <Image
         source={require("../assets/images/logo.png")}
@@ -115,7 +169,6 @@ const styles = StyleSheet.create({
     top: 267,
     left: 129,
     position: "absolute",
-    fontFamily: "comic-sans-ms-regular",
     color: "#121212",
     fontSize: 24,
   },
@@ -123,7 +176,6 @@ const styles = StyleSheet.create({
     top: 202,
     left: 15,
     position: "absolute",
-    fontFamily: "comic-sans-ms-regular",
     color: "#121212",
     fontSize: 16,
   },
@@ -131,7 +183,6 @@ const styles = StyleSheet.create({
     top: 136,
     left: 49,
     position: "absolute",
-    fontFamily: "comic-sans-ms-regular",
     color: "#121212",
     fontSize: 24,
   },
@@ -147,7 +198,6 @@ const styles = StyleSheet.create({
     top: 709,
     left: 240,
     position: "absolute",
-    fontFamily: "comic-sans-ms-regular",
     color: "#121212",
     fontSize: 18,
   },
