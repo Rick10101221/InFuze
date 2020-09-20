@@ -81,7 +81,6 @@ const styles = StyleSheet.create({
   thanksForUsing: {
     top: 0,
     position: "absolute",
-    fontFamily: "comic-sans-ms-regular",
     color: "#121212",
     fontSize: 43,
     opacity: 0.74,
@@ -105,7 +104,6 @@ const styles = StyleSheet.create({
     marginLeft: 197
   },
   infuseAgain1: {
-    fontFamily: "roboto-regular",
     color: "#121212",
     fontSize: 30,
     marginTop: 11,
@@ -115,7 +113,6 @@ const styles = StyleSheet.create({
     top: 263,
     left: 183,
     position: "absolute",
-    fontFamily: "comic-sans-ms-regular",
     color: "#121212",
     fontSize: 72,
     opacity: 0.63
@@ -124,7 +121,6 @@ const styles = StyleSheet.create({
     top: 526,
     left: 249,
     position: "absolute",
-    fontFamily: "roboto-regular",
     color: "#121212"
   },
   thanksForUsingStack: {
@@ -137,7 +133,6 @@ const styles = StyleSheet.create({
     top: 10,
     left: 49,
     position: "absolute",
-    fontFamily: "roboto-regular",
     color: "#121212",
     fontSize: 30
   },
@@ -151,12 +146,10 @@ const styles = StyleSheet.create({
     flexDirection: "row"
   },
   loremIpsum1: {
-    fontFamily: "roboto-regular",
     color: "#121212",
     marginTop: 18
   },
   viewGallery: {
-    fontFamily: "roboto-regular",
     color: "#121212",
     fontSize: 30,
     marginLeft: 13

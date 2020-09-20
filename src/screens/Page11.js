@@ -151,6 +151,12 @@ const styles = StyleSheet.create({
     height: 77,
     position: "absolute",
   },
+  hiUsername: {
+    fontFamily: "roboto-regular",
+    color: "#121212",
+    marginLeft: 193,
+    marginTop: 24
+  },
   image2: {
     top: 13,
     left: 0,

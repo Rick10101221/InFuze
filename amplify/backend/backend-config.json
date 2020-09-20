@@ -18,7 +18,7 @@
     }
   },
   "auth": {
-    "infuze2c5a1941": {
+    "infuzee4d8e15e": {
       "service": "Cognito",
       "providerPlugin": "awscloudformation",
       "dependsOn": [],

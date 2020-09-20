@@ -10,21 +10,7 @@ export const createCocktail = /* GraphQL */ `
       id
       name
       description
-      drinks {
-        id
-        name
-        description
-        alcohol
-        cocktails {
-          id
-          name
-          description
-          createdAt
-          updatedAt
-        }
-        createdAt
-        updatedAt
-      }
+      ingredients
       createdAt
       updatedAt
     }
@@ -39,21 +25,7 @@ export const updateCocktail = /* GraphQL */ `
       id
       name
       description
-      drinks {
-        id
-        name
-        description
-        alcohol
-        cocktails {
-          id
-          name
-          description
-          createdAt
-          updatedAt
-        }
-        createdAt
-        updatedAt
-      }
+      ingredients
       createdAt
       updatedAt
     }
@@ -68,111 +40,7 @@ export const deleteCocktail = /* GraphQL */ `
       id
       name
       description
-      drinks {
-        id
-        name
-        description
-        alcohol
-        cocktails {
-          id
-          name
-          description
-          createdAt
-          updatedAt
-        }
-        createdAt
-        updatedAt
-      }
-      createdAt
-      updatedAt
-    }
-  }
-`;
-export const createDrink = /* GraphQL */ `
-  mutation CreateDrink(
-    $input: CreateDrinkInput!
-    $condition: ModelDrinkConditionInput
-  ) {
-    createDrink(input: $input, condition: $condition) {
-      id
-      name
-      description
-      alcohol
-      cocktails {
-        id
-        name
-        description
-        drinks {
-          id
-          name
-          description
-          alcohol
-          createdAt
-          updatedAt
-        }
-        createdAt
-        updatedAt
-      }
-      createdAt
-      updatedAt
-    }
-  }
-`;
-export const updateDrink = /* GraphQL */ `
-  mutation UpdateDrink(
-    $input: UpdateDrinkInput!
-    $condition: ModelDrinkConditionInput
-  ) {
-    updateDrink(input: $input, condition: $condition) {
-      id
-      name
-      description
-      alcohol
-      cocktails {
-        id
-        name
-        description
-        drinks {
-          id
-          name
-          description
-          alcohol
-          createdAt
-          updatedAt
-        }
-        createdAt
-        updatedAt
-      }
-      createdAt
-      updatedAt
-    }
-  }
-`;
-export const deleteDrink = /* GraphQL */ `
-  mutation DeleteDrink(
-    $input: DeleteDrinkInput!
-    $condition: ModelDrinkConditionInput
-  ) {
-    deleteDrink(input: $input, condition: $condition) {
-      id
-      name
-      description
-      alcohol
-      cocktails {
-        id
-        name
-        description
-        drinks {
-          id
-          name
-          description
-          alcohol
-          createdAt
-          updatedAt
-        }
-        createdAt
-        updatedAt
-      }
+      ingredients
       createdAt
       updatedAt
     }

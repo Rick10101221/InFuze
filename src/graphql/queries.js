@@ -7,21 +7,7 @@ export const getCocktail = /* GraphQL */ `
       id
       name
       description
-      drinks {
-        id
-        name
-        description
-        alcohol
-        cocktails {
-          id
-          name
-          description
-          createdAt
-          updatedAt
-        }
-        createdAt
-        updatedAt
-      }
+      ingredients
       createdAt
       updatedAt
     }
@@ -38,67 +24,7 @@ export const listCocktails = /* GraphQL */ `
         id
         name
         description
-        drinks {
-          id
-          name
-          description
-          alcohol
-          createdAt
-          updatedAt
-        }
-        createdAt
-        updatedAt
-      }
-      nextToken
-    }
-  }
-`;
-export const getDrink = /* GraphQL */ `
-  query GetDrink($id: ID!) {
-    getDrink(id: $id) {
-      id
-      name
-      description
-      alcohol
-      cocktails {
-        id
-        name
-        description
-        drinks {
-          id
-          name
-          description
-          alcohol
-          createdAt
-          updatedAt
-        }
-        createdAt
-        updatedAt
-      }
-      createdAt
-      updatedAt
-    }
-  }
-`;
-export const listDrinks = /* GraphQL */ `
-  query ListDrinks(
-    $filter: ModelDrinkFilterInput
-    $limit: Int
-    $nextToken: String
-  ) {
-    listDrinks(filter: $filter, limit: $limit, nextToken: $nextToken) {
-      items {
-        id
-        name
-        description
-        alcohol
-        cocktails {
-          id
-          name
-          description
-          createdAt
-          updatedAt
-        }
+        ingredients
         createdAt
         updatedAt
       }

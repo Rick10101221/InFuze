@@ -81,7 +81,6 @@ const styles = StyleSheet.create({
     marginLeft: 224
   },
   randomize1: {
-    fontFamily: "comic-sans-ms-regular",
     color: "#121212",
     fontSize: 24,
     marginTop: 13,
@@ -109,7 +108,6 @@ const styles = StyleSheet.create({
     overflow: "visible"
   },
   spicyNutellaYogurt: {
-    fontFamily: "roboto-regular",
     color: "#121212",
     fontSize: 24,
     marginTop: 14,
@@ -137,7 +135,6 @@ const styles = StyleSheet.create({
     overflow: "visible"
   },
   blackSesameYogurt: {
-    fontFamily: "roboto-regular",
     color: "#121212",
     fontSize: 24,
     marginTop: 14,
@@ -165,7 +162,6 @@ const styles = StyleSheet.create({
     overflow: "visible"
   },
   greekYogurt: {
-    fontFamily: "roboto-regular",
     color: "#121212",
     fontSize: 24,
     marginTop: 14,
@@ -193,7 +189,6 @@ const styles = StyleSheet.create({
     overflow: "visible"
   },
   blueberryYogurt: {
-    fontFamily: "roboto-regular",
     color: "#121212",
     fontSize: 24,
     marginTop: 14,
@@ -203,7 +198,6 @@ const styles = StyleSheet.create({
     top: 16,
     left: 162,
     position: "absolute",
-    fontFamily: "comic-sans-ms-regular",
     color: "#121212",
     fontSize: 16
   },
@@ -211,7 +205,6 @@ const styles = StyleSheet.create({
     top: 520,
     left: 224,
     position: "absolute",
-    fontFamily: "roboto-regular",
     color: "#121212",
     fontSize: 46
   },
@@ -233,7 +226,6 @@ const styles = StyleSheet.create({
     height: 123
   },
   typeOfYogurt: {
-    fontFamily: "comic-sans-ms-regular",
     color: "#121212",
     fontSize: 24,
     marginLeft: 6,

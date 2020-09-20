@@ -8,58 +8,56 @@ import {
   ImageBackground
 } from "react-native";
 
-function Page6(props) {
+const finaldrink = {name: "", description: ""}
+
+function Page1(props) {
   return (
     <View style={styles.container}>
-      <View style={styles.image1Stack}>
+      <View style={styles.image2Row}>
+        <Image
+          source={require("../assets/images/logo.png")}
+          resizeMode="contain"
+          style={styles.image2}
+        ></Image>
         <Image
           source={require("../assets/images/silly_hacks_logo.png")}
           resizeMode="contain"
           style={styles.image1}
         ></Image>
-        <View style={styles.image2Stack}>
-          <Image
+      </View>
+      <View style={styles.buttonStackStack}>
+        <View style={styles.buttonStack}>
+          <TouchableOpacity style={styles.button}>
+            <Text style={styles.randomize}>Randomize</Text>
+          </TouchableOpacity>
+          <ImageBackground
             source={require("../assets/images/logo.png")}
             resizeMode="contain"
-            style={styles.image2}
-          ></Image>
-          <View style={styles.buttonStackStack}>
-            <View style={styles.buttonStack}>
-              <TouchableOpacity style={styles.button}>
-                <Text style={styles.randomize}>Randomize</Text>
-              </TouchableOpacity>
-              <ImageBackground
-                source={require("../assets/images/logo.png")}
-                resizeMode="contain"
-                style={styles.image3}
-                imageStyle={styles.image3_imageStyle}
-              >
-                <TouchableOpacity style={styles.button4}>
-                  <Text style={styles.noAlcohol}>No Alcohol</Text>
-                </TouchableOpacity>
-              </ImageBackground>
-              <TouchableOpacity style={styles.button2}>
-                <Text style={styles.vodka}>Vodka</Text>
-              </TouchableOpacity>
-              <TouchableOpacity style={styles.button3}>
-                <Text style={styles.tequila}>Tequila</Text>
-              </TouchableOpacity>
-              <TouchableOpacity style={styles.button5}>
-                <Text style={styles.daiquiri}>Daiquiri</Text>
-              </TouchableOpacity>
-            </View>
-            <Text style={styles.loremIpsum}>
-              Lets choose some drinks for you
-            </Text>
-            <Text style={styles.alcohol}>Alcohol:</Text>
-          </View>
+            style={styles.image3}
+            imageStyle={styles.image3_imageStyle}
+          >
+            <TouchableOpacity style={styles.button6}>
+              <Text style={styles.soyMilk}>Soy Milk</Text>
+            </TouchableOpacity>
+          </ImageBackground>
+          <TouchableOpacity style={styles.button3}>
+            <Text style={styles.almondMilk}>Almond Milk</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.button4}>
+            <Text style={styles.coconutMilk}>Coconut Milk</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.button5}>
+            <Text style={styles.riceMilk}>Rice Milk</Text>
+          </TouchableOpacity>
         </View>
+        <Text style={styles.loremIpsum}>Lets choose some drinks for you</Text>
       </View>
+      <Text style={styles.drinks}>Step 1: Pick your Liquid Base:</Text>
       <TouchableOpacity
-        onPress={() => props.navigation.navigate("Page3")}
-        style={styles.button1}
+        onPress={() => props.navigation.navigate("Page2")}
+        style={styles.button2}
       >
-        <Text style={styles.next1}>Next</Text>
+        <Text style={styles.next}>Next</Text>
       </TouchableOpacity>
     </View>
   );
@@ -70,34 +68,35 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "rgba(254,212,212,1)"
   },
+  image2: {
+    width: 80,
+    height: 123
+  },
   image1: {
-    top: 33,
-    left: 464,
     width: 62,
     height: 77,
-    position: "absolute"
+    marginLeft: 212,
+    marginTop: 33
   },
-  image2: {
-    top: 0,
-    left: 172,
-    width: 80,
+  image2Row: {
     height: 123,
-    position: "absolute"
+    flexDirection: "row",
+    marginTop: 13,
+    marginRight: 60
   },
   button: {
-    top: 111,
+    top: 59,
     width: 246,
     height: 67,
     position: "absolute",
     backgroundColor: "rgba(255,182,182,1)",
-    left: 256
+    left: 209
   },
   randomize: {
-    fontFamily: "comic-sans-ms-regular",
     color: "#121212",
     fontSize: 24,
-    marginTop: 15,
-    marginLeft: 45
+    marginTop: 12,
+    marginLeft: 28
   },
   image3: {
     top: 0,
@@ -109,7 +108,7 @@ const styles = StyleSheet.create({
   image3_imageStyle: {
     opacity: 0.06
   },
-  button4: {
+  button6: {
     width: 257,
     height: 56,
     backgroundColor: "rgba(244,187,187,1)",
@@ -126,47 +125,18 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.37,
     shadowRadius: 0,
     overflow: "visible",
-    marginTop: 446,
-    marginLeft: 249
+    marginTop: 483,
+    marginLeft: 205
   },
-  noAlcohol: {
-    fontFamily: "roboto-regular",
+  soyMilk: {
     color: "#121212",
     fontSize: 24,
     marginTop: 13,
-    marginLeft: 44
-  },
-  button2: {
-    top: 264,
-    left: 251,
-    width: 257,
-    height: 56,
-    position: "absolute",
-    backgroundColor: "rgba(244,187,187,1)",
-    borderWidth: 7,
-    borderColor: "#000000",
-    borderStyle: "solid",
-    borderRadius: 15,
-    shadowColor: "rgba(0,0,0,1)",
-    shadowOffset: {
-      width: 3,
-      height: 3
-    },
-    elevation: 5,
-    shadowOpacity: 0.37,
-    shadowRadius: 0,
-    overflow: "visible"
-  },
-  vodka: {
-    fontFamily: "roboto-regular",
-    color: "#121212",
-    fontSize: 24,
-    marginTop: 15,
     marginLeft: 42
   },
   button3: {
-    top: 351,
-    left: 251,
+    top: 282,
+    left: 205,
     width: 257,
     height: 56,
     position: "absolute",
@@ -185,16 +155,42 @@ const styles = StyleSheet.create({
     shadowRadius: 0,
     overflow: "visible"
   },
-  tequila: {
-    fontFamily: "roboto-regular",
+  almondMilk: {
+    color: "#121212",
+    fontSize: 24,
+    marginTop: 14,
+    marginLeft: 50
+  },
+  button4: {
+    top: 196,
+    left: 205,
+    width: 257,
+    height: 56,
+    position: "absolute",
+    backgroundColor: "rgba(244,187,187,1)",
+    borderWidth: 7,
+    borderColor: "#000000",
+    borderStyle: "solid",
+    borderRadius: 15,
+    shadowColor: "rgba(0,0,0,1)",
+    shadowOffset: {
+      width: 3,
+      height: 3
+    },
+    elevation: 5,
+    shadowOpacity: 0.37,
+    shadowRadius: 0,
+    overflow: "visible"
+  },
+  coconutMilk: {
     color: "#121212",
     fontSize: 24,
     marginTop: 14,
     marginLeft: 42
   },
   button5: {
-    top: 551,
-    left: 251,
+    top: 377,
+    left: 203,
     width: 257,
     height: 56,
     position: "absolute",
@@ -213,70 +209,51 @@ const styles = StyleSheet.create({
     shadowRadius: 0,
     overflow: "visible"
   },
-  daiquiri: {
-    fontFamily: "roboto-regular",
+  riceMilk: {
     color: "#121212",
     fontSize: 24,
     marginTop: 14,
-    marginLeft: 42
+    marginLeft: 44
   },
   buttonStack: {
-    top: 18,
+    top: 0,
     left: 0,
     width: 668,
-    height: 607,
+    height: 565,
     position: "absolute"
   },
   loremIpsum: {
-    top: 61,
-    left: 194,
+    top: 6,
+    left: 147,
     position: "absolute",
-    fontFamily: "comic-sans-ms-regular",
     color: "#121212",
     fontSize: 16
   },
-  alcohol: {
-    top: 0,
-    left: 314,
-    position: "absolute",
-    fontFamily: "comic-sans-ms-regular",
-    color: "#121212",
-    fontSize: 24
-  },
   buttonStackStack: {
-    top: 110,
-    left: 0,
     width: 668,
-    height: 625,
-    position: "absolute"
+    height: 565,
+    marginTop: 60,
+    marginLeft: -125
   },
-  image2Stack: {
-    top: 0,
-    left: 0,
-    width: 668,
-    height: 735,
-    position: "absolute"
+  drinks: {
+    color: "#121212",
+    fontSize: 24,
+    marginTop: -625,
+    marginLeft: 49
   },
-  image1Stack: {
-    width: 668,
-    height: 735,
-    marginTop: 13,
-    marginLeft: -172
-  },
-  button1: {
+  button2: {
     width: 122,
     height: 56,
     backgroundColor: "rgba(249,179,179,1)",
-    marginTop: 30,
-    marginLeft: 231
+    marginTop: 604,
+    marginLeft: 201
   },
-  next1: {
-    fontFamily: "comic-sans-ms-regular",
+  next: {
     color: "#121212",
     fontSize: 18,
-    marginTop: 16,
-    marginLeft: 39
+    marginTop: 15,
+    marginLeft: 47
   }
 });
 
-export default Page6;
+export default Page1;

@@ -75,7 +75,6 @@ const styles = StyleSheet.create({
     marginLeft: 190
   },
   randomize1: {
-    fontFamily: "comic-sans-ms-regular",
     color: "#121212",
     fontSize: 24,
     marginTop: 22,
@@ -85,7 +84,6 @@ const styles = StyleSheet.create({
     top: 441,
     left: 190,
     position: "absolute",
-    fontFamily: "roboto-regular",
     color: "#121212",
     fontSize: 46
   },
@@ -119,7 +117,6 @@ const styles = StyleSheet.create({
     overflow: "visible"
   },
   icePlease: {
-    fontFamily: "roboto-regular",
     color: "#121212",
     fontSize: 24,
     marginTop: 14,
@@ -147,7 +144,6 @@ const styles = StyleSheet.create({
     overflow: "visible"
   },
   absolutelyNoIce: {
-    fontFamily: "roboto-regular",
     color: "#121212",
     fontSize: 24,
     marginTop: 14,
@@ -164,7 +160,6 @@ const styles = StyleSheet.create({
     height: 123
   },
   iceAnyone: {
-    fontFamily: "comic-sans-ms-regular",
     color: "#121212",
     fontSize: 24,
     marginLeft: 5,
@@ -183,7 +178,6 @@ const styles = StyleSheet.create({
     marginRight: 60
   },
   loremIpsum1: {
-    fontFamily: "comic-sans-ms-regular",
     color: "#121212",
     fontSize: 16,
     marginTop: 31,

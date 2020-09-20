@@ -2,63 +2,58 @@ import React, { Component } from "react";
 import {
   StyleSheet,
   View,
-  TouchableOpacity,
-  Text,
   Image,
-  ImageBackground
+  ImageBackground,
+  TouchableOpacity,
+  Text
 } from "react-native";
 
-function Page2(props) {
+function Page4(props) {
   return (
     <View style={styles.container}>
-      <View style={styles.button1StackStack}>
-        <View style={styles.button1Stack}>
-          <TouchableOpacity style={styles.button1}>
-            <View style={styles.daiquiri1Row}>
-              <Text style={styles.daiquiri1}></Text>
-              <Text style={styles.orangeJuice}>Orange Juice</Text>
-            </View>
-          </TouchableOpacity>
-          <ImageBackground
-            source={require("../assets/images/logo.png")}
-            resizeMode="contain"
-            style={styles.image1}
-            imageStyle={styles.image1_imageStyle}
-          >
-            <Text style={styles.appleCiderVinegar}>Apple Cider Vinegar</Text>
-          </ImageBackground>
+      <View style={styles.image1Stack}>
+        <ImageBackground
+          source={require("../assets/images/logo.png")}
+          resizeMode="contain"
+          style={styles.image1}
+          imageStyle={styles.image1_imageStyle}
+        >
           <TouchableOpacity style={styles.button6}>
             <Text style={styles.randomize1}>Randomize</Text>
           </TouchableOpacity>
-        </View>
+        </ImageBackground>
+        <TouchableOpacity style={styles.button1}>
+          <Text style={styles.daiquiri1}></Text>
+          <Text style={styles.banana}>Banana</Text>
+        </TouchableOpacity>
         <TouchableOpacity style={styles.button2}>
-          <Text style={styles.coconutWater}>Coconut Water</Text>
+          <Text style={styles.snakeSkinFruit}>SnakeSkin Fruit</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.button3}>
-          <Text style={styles.kvas}>KVAS</Text>
+          <Text style={styles.dragonFruit}>Dragon Fruit</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.button4}></TouchableOpacity>
+        <TouchableOpacity style={styles.button4}>
+          <Text style={styles.strawberries}>Strawberries</Text>
+        </TouchableOpacity>
+        <Text style={styles.loremIpsum1}>Lets choose some drinks for you</Text>
       </View>
       <TouchableOpacity
         onPress={() => props.navigation.navigate("Page3")}
         style={styles.button5}
-      >
-        <Text style={styles.next1}>Next</Text>
-      </TouchableOpacity>
+      ></TouchableOpacity>
       <View style={styles.image2Row}>
         <Image
           source={require("../assets/images/logo.png")}
           resizeMode="contain"
           style={styles.image2}
         ></Image>
-        <Text style={styles.additionalLiquids}>Additional Liquids:</Text>
+        <Text style={styles.typeOfFruit}>Type of Fruit:</Text>
         <Image
           source={require("../assets/images/silly_hacks_logo.png")}
           resizeMode="contain"
           style={styles.image3}
         ></Image>
       </View>
-      <Text style={styles.loremIpsum1}>Lets choose some drinks for you</Text>
     </View>
   );
 }
@@ -66,92 +61,66 @@ function Page2(props) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "rgba(252,213,213,1)"
-  },
-  button1: {
-    top: 469,
-    left: 200,
-    width: 257,
-    height: 56,
-    position: "absolute",
-    backgroundColor: "rgba(244,187,187,1)",
-    borderWidth: 7,
-    borderColor: "#000000",
-    borderStyle: "solid",
-    borderRadius: 15,
-    shadowColor: "rgba(0,0,0,1)",
-    shadowOffset: {
-      width: 3,
-      height: 3
-    },
-    elevation: 5,
-    shadowOpacity: 0.37,
-    shadowRadius: 0,
-    overflow: "visible",
-    flexDirection: "row"
-  },
-  daiquiri1: {
-    fontFamily: "roboto-regular",
-    color: "#121212",
-    fontSize: 46,
-    marginLeft: -1
-  },
-  orangeJuice: {
-    fontFamily: "roboto-regular",
-    color: "#121212",
-    fontSize: 24,
-    marginLeft: 38
-  },
-  daiquiri1Row: {
-    height: 29,
-    flexDirection: "row",
-    flex: 1,
-    marginRight: 74,
-    marginLeft: 5,
-    marginTop: 13
+    backgroundColor: "rgba(255,211,211,1)"
   },
   image1: {
-    top: 0,
-    left: 0,
     width: 668,
     height: 565,
-    position: "absolute"
+    position: "absolute",
+    left: 0,
+    top: 0
   },
   image1_imageStyle: {
     opacity: 0.06
   },
-  appleCiderVinegar: {
-    fontFamily: "roboto-regular",
-    color: "#121212",
-    fontSize: 24,
-    marginTop: 199,
-    marginLeft: 229
-  },
   button6: {
-    top: 46,
     width: 246,
     height: 67,
-    position: "absolute",
     backgroundColor: "rgba(255,182,182,1)",
-    left: 204
+    marginTop: 81,
+    alignSelf: "center"
   },
   randomize1: {
-    fontFamily: "comic-sans-ms-regular",
+    color: "#121212",
+    fontSize: 24,
+    marginTop: 13,
+    marginLeft: 45
+  },
+  button1: {
+    top: 523,
+    left: 212,
+    width: 257,
+    height: 56,
+    position: "absolute",
+    backgroundColor: "rgba(244,187,187,1)",
+    borderWidth: 7,
+    borderColor: "#000000",
+    borderStyle: "solid",
+    borderRadius: 15,
+    shadowColor: "rgba(0,0,0,1)",
+    shadowOffset: {
+      width: 3,
+      height: 3
+    },
+    elevation: 5,
+    shadowOpacity: 0.37,
+    shadowRadius: 0,
+    overflow: "visible"
+  },
+  daiquiri1: {
+    color: "#121212",
+    fontSize: 46,
+    marginLeft: -1
+  },
+  banana: {
     color: "#121212",
     fontSize: 24,
     marginTop: 15,
-    marginLeft: 45
-  },
-  button1Stack: {
-    top: 0,
-    left: 0,
-    width: 668,
-    height: 565,
-    position: "absolute"
+    marginLeft: 37
   },
   button2: {
-    top: 368,
-    left: 198,
+    top: 419,
+    left: 212,
     width: 257,
     height: 56,
     position: "absolute",
@@ -170,16 +139,15 @@ const styles = StyleSheet.create({
     shadowRadius: 0,
     overflow: "visible"
   },
-  coconutWater: {
-    fontFamily: "roboto-regular",
+  snakeSkinFruit: {
     color: "#121212",
     fontSize: 24,
     marginTop: 14,
-    marginLeft: 42
+    marginLeft: 29
   },
   button3: {
-    top: 274,
-    left: 200,
+    top: 319,
+    left: 212,
     width: 257,
     height: 56,
     position: "absolute",
@@ -198,16 +166,15 @@ const styles = StyleSheet.create({
     shadowRadius: 0,
     overflow: "visible"
   },
-  kvas: {
-    fontFamily: "roboto-regular",
+  dragonFruit: {
     color: "#121212",
     fontSize: 24,
     marginTop: 14,
-    marginLeft: 34
+    marginLeft: 24
   },
   button4: {
-    top: 186,
-    left: 200,
+    top: 226,
+    left: 209,
     width: 257,
     height: 56,
     position: "absolute",
@@ -226,55 +193,54 @@ const styles = StyleSheet.create({
     shadowRadius: 0,
     overflow: "visible"
   },
-  button1StackStack: {
+  strawberries: {
+    color: "#121212",
+    fontSize: 24,
+    marginTop: 14,
+    marginLeft: 27
+  },
+  loremIpsum1: {
+    top: 19,
+    left: 149,
+    position: "absolute",
+    color: "#121212",
+    fontSize: 16
+  },
+  image1Stack: {
     width: 668,
-    height: 565,
-    marginTop: 206,
-    marginLeft: -120
+    height: 579,
+    marginTop: 165,
+    marginLeft: -127
   },
   button5: {
     width: 122,
     height: 56,
     backgroundColor: "rgba(249,179,179,1)",
-    marginTop: 21,
-    marginLeft: 247
-  },
-  next1: {
-    fontFamily: "comic-sans-ms-regular",
-    color: "#121212",
-    fontSize: 18,
-    marginTop: 16,
-    marginLeft: 45
+    marginTop: 41,
+    marginLeft: 262
   },
   image2: {
     width: 80,
     height: 123
   },
-  additionalLiquids: {
-    fontFamily: "comic-sans-ms-regular",
+  typeOfFruit: {
     color: "#121212",
     fontSize: 24,
     marginLeft: 5,
-    marginTop: 110
+    marginTop: 94
   },
   image3: {
     width: 62,
     height: 77,
+    marginLeft: 49,
     marginTop: 33
   },
   image2Row: {
-    height: 144,
+    height: 128,
     flexDirection: "row",
-    marginTop: -835,
+    marginTop: -828,
     marginRight: 60
-  },
-  loremIpsum1: {
-    fontFamily: "comic-sans-ms-regular",
-    color: "#121212",
-    fontSize: 16,
-    marginTop: 27,
-    marginLeft: 22
   }
 });
 
-export default Page2;
+export default Page4;

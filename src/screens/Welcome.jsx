@@ -66,7 +66,6 @@ const styles = StyleSheet.create({
     opacity: 0.42
   },
   to3: {
-    fontFamily: "comic-sans-ms-regular",
     color: "#121212",
     fontSize: 57,
     marginTop: 175,
@@ -87,7 +86,6 @@ const styles = StyleSheet.create({
   inFuze: {
     top: 247,
     position: "absolute",
-    fontFamily: "comic-sans-ms-regular",
     color: "#121212",
     fontSize: 54,
     left: 506
@@ -96,7 +94,6 @@ const styles = StyleSheet.create({
     top: 110,
     left: 499,
     position: "absolute",
-    fontFamily: "comic-sans-ms-regular",
     color: "#121212",
     fontSize: 47
   },
@@ -104,7 +101,6 @@ const styles = StyleSheet.create({
     top: 175,
     left: 546,
     position: "absolute",
-    fontFamily: "comic-sans-ms-regular",
     color: "#121212",
     fontSize: 57
   },
@@ -130,7 +126,6 @@ const styles = StyleSheet.create({
     overflow: "visible"
   },
   letsBegin: {
-    fontFamily: "roboto-regular",
     color: "#121212",
     fontSize: 24,
     marginTop: 14,

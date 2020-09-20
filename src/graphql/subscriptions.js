@@ -7,21 +7,7 @@ export const onCreateCocktail = /* GraphQL */ `
       id
       name
       description
-      drinks {
-        id
-        name
-        description
-        alcohol
-        cocktails {
-          id
-          name
-          description
-          createdAt
-          updatedAt
-        }
-        createdAt
-        updatedAt
-      }
+      ingredients
       createdAt
       updatedAt
     }
@@ -33,21 +19,7 @@ export const onUpdateCocktail = /* GraphQL */ `
       id
       name
       description
-      drinks {
-        id
-        name
-        description
-        alcohol
-        cocktails {
-          id
-          name
-          description
-          createdAt
-          updatedAt
-        }
-        createdAt
-        updatedAt
-      }
+      ingredients
       createdAt
       updatedAt
     }
@@ -59,102 +31,7 @@ export const onDeleteCocktail = /* GraphQL */ `
       id
       name
       description
-      drinks {
-        id
-        name
-        description
-        alcohol
-        cocktails {
-          id
-          name
-          description
-          createdAt
-          updatedAt
-        }
-        createdAt
-        updatedAt
-      }
-      createdAt
-      updatedAt
-    }
-  }
-`;
-export const onCreateDrink = /* GraphQL */ `
-  subscription OnCreateDrink {
-    onCreateDrink {
-      id
-      name
-      description
-      alcohol
-      cocktails {
-        id
-        name
-        description
-        drinks {
-          id
-          name
-          description
-          alcohol
-          createdAt
-          updatedAt
-        }
-        createdAt
-        updatedAt
-      }
-      createdAt
-      updatedAt
-    }
-  }
-`;
-export const onUpdateDrink = /* GraphQL */ `
-  subscription OnUpdateDrink {
-    onUpdateDrink {
-      id
-      name
-      description
-      alcohol
-      cocktails {
-        id
-        name
-        description
-        drinks {
-          id
-          name
-          description
-          alcohol
-          createdAt
-          updatedAt
-        }
-        createdAt
-        updatedAt
-      }
-      createdAt
-      updatedAt
-    }
-  }
-`;
-export const onDeleteDrink = /* GraphQL */ `
-  subscription OnDeleteDrink {
-    onDeleteDrink {
-      id
-      name
-      description
-      alcohol
-      cocktails {
-        id
-        name
-        description
-        drinks {
-          id
-          name
-          description
-          alcohol
-          createdAt
-          updatedAt
-        }
-        createdAt
-        updatedAt
-      }
+      ingredients
       createdAt
       updatedAt
     }

@@ -7,8 +7,30 @@ import {
   TouchableOpacity,
   ImageBackground
 } from "react-native";
+import { API, graphqlOperation, Auth } from "aws-amplify";
+import { createCocktail } from "../graphql/mutations";
+
+const initialState = { name: "", description: "", alcohol: true };
 
 function FinalDrink(props) {
+  const [formState, setFormState] = useState(initialState);
+  const [cocktails, setCocktails] = useState([]);
+
+  function setInput(key, value) {
+    setFormState({ ...formState, [key]: value });
+  }
+
+  async function addCocktail() {
+    try {
+      const cocktail = { ...formState };
+      setCocktails([...cocktails, cocktail]);
+      setFormState(initialState);
+      await API.graphql(graphqlOperation(createDrink, { input: drink }));
+    } catch (err) {
+      console.log("error creating drink:", err);
+    }
+  }
+  
   return (
     <View style={styles.container}>
       <View style={styles.image2StackRow}>

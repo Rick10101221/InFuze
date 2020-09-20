@@ -10,6 +10,11 @@ import Page1 from "./src/screens/Page1";
 import Page2 from "./src/screens/Page2";
 import Page3 from "./src/screens/Page3";
 import Page4 from "./src/screens/Page4";
+import Page5 from "./src/screens/Page5"
+import Page6 from "./src/screens/Page6"
+import FinalDrink from "./src/screens/FinalDrink.jsx"
+import ThanksyouScreen from "./src/screens/ThankyouScreen"
+import Gallery from "./src/screens/Gallery"
 import Infuzer from "./src/screens/Infuzer"
 import Amplify from 'aws-amplify'
 import config from './aws-exports'
@@ -21,7 +26,12 @@ const DrawerNavigation = createDrawerNavigator({
   Page2: Page2,
   Page3: Page3,
   Page4: Page4,
-  Infuzer: Infuzer
+  Infuzer: Infuzer,
+  Page5: Page5,
+  Page6: Page6,
+  Thanksyou: ThanksyouScreen,
+  Gallery: Gallery,
+  FinalDrink
 });
 
 const StackNavigation = createStackNavigator(
@@ -33,7 +43,13 @@ const StackNavigation = createStackNavigator(
     Page1: Page1,
     Page2: Page2,
     Page3: Page3,
-    Page4: Page4
+    Page4: Page4,
+    Infuzer: Infuzer,
+    Page5: Page5,
+    Page6: Page6,
+    Thanksyou: ThanksyouScreen,
+    Gallery: Gallery,
+    FinalDrink
   },
   {
     headerMode: "none"
